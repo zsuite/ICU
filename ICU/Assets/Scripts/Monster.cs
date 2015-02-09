@@ -7,11 +7,14 @@ public class Monster : MonoBehaviour {
 	public float soundEffectPitchRandomness = 0.5f;
 	public int stage;
 	public GameObject player;
+	public GameObject blinkQuad;
 	Vector3 differenceBetween;
 	bool blinkOnce;
 	// Use this for initialization
 	void Start () {
 		blinkOnce = true;
+		blinkQuad.SetActive(false);
+
 		stage =1;
 		mon = new SightObject();
 		differenceBetween = player.transform.position - this.gameObject.transform.position;
@@ -22,12 +25,15 @@ public class Monster : MonoBehaviour {
 	void Update () {
 		if(renderer.isVisible && EyeValues.playerBlinked && blinkOnce){
 			Teleport(stage);
+			blinkQuad.SetActive(true);
 			audio.pitch = Random.Range(1.0f - soundEffectPitchRandomness, 1.0f + soundEffectPitchRandomness);
 
 			blinkOnce =false;
 
 		}
 		if (!EyeValues.playerBlinked){
+			blinkQuad.SetActive(false);
+
 			blinkOnce = true;
 		}
 
