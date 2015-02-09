@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Backdrop
-  m_Shader: {fileID: 22, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 7, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -17,12 +17,19 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: 08f28e42a647e2a4cbd32e793359aa3c, type: 3}
-          m_Scale: {x: .5, y: .5}
+          m_Texture: {fileID: 2800000, guid: 7a632f967e8ad42f5bd275898151ab6a, type: 3}
+          m_Scale: {x: 110, y: 10}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _BumpMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DecalTex
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -43,7 +50,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .0735294223, g: .0735294223, b: .0735294223, a: 1}
+        second: {r: .198529422, g: .198529422, b: .198529422, a: 1}
       data:
         first:
           name: _SpecColor
