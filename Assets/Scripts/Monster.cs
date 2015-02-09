@@ -35,16 +35,21 @@ public class Monster : MonoBehaviour {
 		switch(_stage){
 		case 1:
 			this.gameObject.transform.position = transform.position + (player.transform.position - transform.position) * 0.5f;
+			transform.LookAt(player.transform.position);
 			if(Vector3.Distance(this.gameObject.transform.position, player.transform.position) <= 5){
 				stage = 2;
 			}
 			break;
 		case 2:
 			this.gameObject.transform.position = transform.position + (player.transform.position - transform.position) * 0.75f;
+			transform.LookAt(player.transform.position);
+
 			stage = 3;
 			break;
 		case 3:
 			this.gameObject.transform.position = transform.position + (player.transform.position - transform.position) * 0.85f;
+			transform.LookAt(player.transform.position);
+
 			break;
 		}
 		
