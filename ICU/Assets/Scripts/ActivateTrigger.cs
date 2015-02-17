@@ -27,15 +27,23 @@ public class ActivateTrigger : MonoBehaviour {
 	public GameObject source; // use only for REPLACE
 	public int triggerCount = 1;///
 	public bool repeatTrigger = false;
+	public bool activateViaBlink = true;
+
 	public string nextScene;
+	private bool PlayerBlinked;
 	bool activateReady = false;
 	float timeSet = 0;
 
 	void Start(){
-
+		PlayerBlinked = false;
 	}
 	void Update(){
-
+		if (activateViaBlink){
+			PlayerBlinked = EyeValues.playerBlinked;
+		}
+		else{
+			PlayerBlinked = true;
+		}
 	}
 	void DoActivateTrigger () {
 		triggerCount--;
@@ -47,7 +55,7 @@ public class ActivateTrigger : MonoBehaviour {
 //			if (targetBehaviour != null)
 //				targetGameObject = targetBehaviour.gameObject;
 			for(int i = 0; i < target.Length; i++){
-				if(target[i].renderer.isVisible && EyeValues.playerBlinked){
+				if(target[i].renderer.isVisible && PlayerBlinked){
 
 					switch (action) {
 						case Mode.Trigger:
@@ -55,7 +63,7 @@ public class ActivateTrigger : MonoBehaviour {
 							break;
 						case Mode.Replace:
 							if (source != null) {
-								Object.Instantiate (source, target[i].transform.position, target[i].transform.rotation);
+								GameObject.Instantiate (source, target[i].transform.position, target[i].transform.rotation);
 								Destroy(target[i]);
 							}
 							break;
@@ -90,7 +98,7 @@ public class ActivateTrigger : MonoBehaviour {
 //		if (targetBehaviour != null)
 //			targetGameObject = targetBehaviour.gameObject;
 		for(int i = 0; i < target.Length; i++){
-			if(target[i].renderer.isVisible && EyeValues.playerBlinked){
+			if(target[i].renderer.isVisible && PlayerBlinked){
 				switch (action) {
 				case Mode.Trigger:
 					target[i].BroadcastMessage ("DoActivateTrigger");

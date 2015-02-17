@@ -5210,7 +5210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   smoothLeftEye: 0
   smoothRightEye: 0
-  blinkTriggerIndex: 75
+  blinkTriggerIndex: 45
 --- !u!1001 &1780986337
 Prefab:
   m_ObjectHideFlags: 0
