@@ -3,13 +3,11 @@ using System.Collections;
 
 [RequireComponent(typeof(Renderer))]
 public class Monster : MonoBehaviour {
-	SightObject mon;
 	public float soundEffectPitchRandomness = 0.5f;
 	public int stage;
 	public GameObject player;
 	public GameObject lookAtMe;
 	public GameObject blinkQuad;
-	Vector3 differenceBetween;
 	bool blinkOnce;
 	// Use this for initialization
 	void Start () {
@@ -17,8 +15,6 @@ public class Monster : MonoBehaviour {
 		//blinkQuad.SetActive(false);
 
 		stage =1;
-		mon = new SightObject();
-		differenceBetween = player.transform.position - this.gameObject.transform.position;
 
 	}
 	
