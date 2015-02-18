@@ -6,7 +6,13 @@ public class PlayerController : Controller {
 	MouseLook[] disableMouse;
 	// Use this for initialization
 	void Start () {
+		StateManager.Dead = false;
 		disableMouse = GetComponentsInChildren<MouseLook>();
+		GetComponent<MouseLook>().enabled = true;
+		GetComponent<CharacterController>().enabled = true;
+		foreach (MouseLook mouse in disableMouse) {	
+			mouse.enabled = true;
+		}
 	}
 	
 	// Update is called once per frame
