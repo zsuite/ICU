@@ -1677,6 +1677,8 @@ GameObject:
   - 114: {fileID: 306752245}
   - 114: {fileID: 306752244}
   - 82: {fileID: 306752248}
+  - 114: {fileID: 306752250}
+  - 114: {fileID: 306752249}
   m_Layer: 0
   m_Name: First Person Controller
   m_TagString: Untagged
@@ -1860,6 +1862,29 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &306752249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 306752242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cea02a3c51ffc4a9fad2ba16b7bcb495, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1553355363}
+--- !u!114 &306752250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 306752242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6f3a3b0403b9cc43aea0113e4efd7d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &328121744
 GameObject:
   m_ObjectHideFlags: 0
