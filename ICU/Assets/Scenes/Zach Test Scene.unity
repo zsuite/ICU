@@ -4149,7 +4149,7 @@ MonoBehaviour:
   triggerCount: 1
   repeatTrigger: 1
   activateViaBlink: 1
-  needsToBeVisible: 0
+  needsToBeVisible: 1
   nextScene: 
 --- !u!23 &859239376
 Renderer:

@@ -55,7 +55,7 @@ public class ActivateTrigger : MonoBehaviour {
 //			if (targetBehaviour != null)
 //				targetGameObject = targetBehaviour.gameObject;
 			for(int i = 0; i < target.Length; i++){
-				if(target[i].renderer.isVisible == needsToBeVisible && PlayerBlinked){
+				if(PlayerBlinked){
 
 					switch (action) {
 						case Mode.Trigger:
@@ -98,13 +98,13 @@ public class ActivateTrigger : MonoBehaviour {
 //		if (targetBehaviour != null)
 //			targetGameObject = targetBehaviour.gameObject;
 		for(int i = 0; i < target.Length; i++){
-			if(target[i].renderer.isVisible == needsToBeVisible && PlayerBlinked){
+			if(PlayerBlinked){
 				switch (action) {
 				case Mode.Trigger:
 					target[i].BroadcastMessage ("DoActivateTrigger");
 					break;
 				case Mode.Replace:
-					if (source != null) {
+					if (source != null && target[i].renderer.isVisible) {
 						GameObject.Instantiate (source, target[i].transform.position, target[i].transform.rotation);
 						Destroy (target[i]);
 					}
@@ -118,15 +118,16 @@ public class ActivateTrigger : MonoBehaviour {
 						target[i].renderer.enabled = true;
 					break;	
 				case Mode.Disable:
-					if (target != null)
+					if (target != null && target[i].renderer.isVisible == needsToBeVisible)
 						target[i].renderer.enabled = false;
 					break;	
 				case Mode.Animate:
 					target[i].animation.Play ();
 					break;	
 				case Mode.Deactivate:
-
-					target[i].SetActive(false);
+					if(target[i].renderer.isVisible == needsToBeVisible){
+						target[i].SetActive(false);
+					}
 					break;
 				case Mode.LoadScene:
 						Debug.Log("Ya");
