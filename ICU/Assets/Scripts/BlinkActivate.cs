@@ -15,7 +15,7 @@ public class BlinkActivate : MonoBehaviour {
 	
 	// Update is called once per frame
 	void OnTriggerStay(Collider other) {
-		if(renderer.isVisible && EyeValues.playerBlinked && blinkOnce){
+		if(EyeValues.playerBlinked && blinkOnce){
 			//blinkQuad.SetActive(true);
 
 			GetComponent<ActivateTrigger>().enabled = true;
