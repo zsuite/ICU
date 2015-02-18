@@ -20,6 +20,7 @@ public class PlayerController : Controller {
 		Quaternion rotationT = Quaternion.LookRotation(relativePos);
 		GetComponent<MouseLook>().enabled = false;
 		GetComponent<CharacterController>().enabled = false;
+		GetComponentInChildren<MouseLook>().enabled = false;
 		transform.rotation = Quaternion.Slerp (transform.rotation ,rotationT, 0.1f);
 	}
 }
