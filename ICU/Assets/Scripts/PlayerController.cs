@@ -18,7 +18,8 @@ public class PlayerController : Controller {
 	void BeginTurn(){
 		Vector3 relativePos = target.position - transform.position;
 		Quaternion rotationT = Quaternion.LookRotation(relativePos);
-
+		GetComponent<MouseLook>().enabled = false;
+		GetComponent<CharacterController>().enabled = false;
 		transform.rotation = Quaternion.Slerp (transform.rotation ,rotationT, 0.1f);
 	}
 }
