@@ -68,7 +68,6 @@ public class ActivateTrigger : MonoBehaviour {
 							}
 							break;
 						case Mode.Activate:
-							
 								target[i].SetActive(true);
 							break;
 						case Mode.Enable:
@@ -144,6 +143,7 @@ public class ActivateTrigger : MonoBehaviour {
 			DoActivateTriggerTime();
 		}
 		else if(afterSeconds == 0){
+			activateReady = true;
 			DoActivateTrigger ();
 		}
 
