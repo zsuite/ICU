@@ -8,6 +8,7 @@ public class Monster : MonoBehaviour {
 	public GameObject player;
 	public GameObject lookAtMe;
 	public GameObject blinkQuad;
+	public float speedTowardsPlayer = 0.2f;
 	bool blinkOnce;
 	// Use this for initialization
 	void Start () {
@@ -31,11 +32,16 @@ public class Monster : MonoBehaviour {
 			blinkOnce =false;
 
 		}
+		else if (renderer.isVisible == false)
+		{
+			transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speedTowardsPlayer);
+		}
 		if (!EyeValues.playerBlinked){
 			blinkQuad.SetActive(false);
 
 			blinkOnce = true;
 		}
+
 
 	}
 
