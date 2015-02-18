@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 [RequireComponent(typeof(FaceTrackingManager))]
 public class EyeValues : MonoBehaviour {
@@ -8,18 +9,47 @@ public class EyeValues : MonoBehaviour {
 	[SerializeField]
 	private int smoothRightEye;		//100 = EYE IS CLOSED
 
-	
+	[SerializeField]
+	private int lastEyePositionL;
+
+	[SerializeField]
+	private int lastEyePositionR;
+
+	[SerializeField]
+	private int deltaLeftEye; // change between current eye position and previous eye position .33 seconds ago.
+
+	[SerializeField]
+	private int deltaRightEye; // change between current eye position and previous eye position .33 seconds ago.
+
+	public int blinkDeltaIndex = 10; // this is the delta that will trigger a blink
+
+	public int blinkDeltaTriggerMin = 40; // at this point the delta of your eye values will matter
+
 	public static bool playerBlinked;
 
-	public int blinkTriggerIndex = 50;	//The value when playerBlinked becomes true
+	public int blinkTriggerIndexMax = 80;	//The value when playerBlinked becomes true // Eyes are efffectively closed
 	
 	private FaceTrackingManager realCam;
 
+	List<int> positionsListL;
+	List<int> positionsListR;
+
+	int positionsIndexL;
+	int positionsIndexR;
+
 	void Start () {
+		positionsIndexL = 0;
+		positionsIndexR = 0;
+		positionsListL = new List<int>();
+		positionsListR = new List<int>();
 		realCam = gameObject.GetComponent<FaceTrackingManager>();
 	}
 	
 	void Update () {
+		LastEyeValueL();
+		LastEyeValueR();
+		deltaLeftEye = smoothLeftEye - lastEyePositionL;
+		deltaRightEye = smoothRightEye - lastEyePositionR;
 
 		smoothLeftEye = Mathf.RoundToInt(realCam.LeftEyeClose); // Rounds float values to integers
 		smoothRightEye = Mathf.RoundToInt(realCam.RightEyeClose);
@@ -29,11 +59,58 @@ public class EyeValues : MonoBehaviour {
 	}
 
 	bool CheckEyeClosure(){
-		if ((smoothLeftEye >= blinkTriggerIndex || smoothRightEye >= blinkTriggerIndex)) {	
+		if (smoothLeftEye >= blinkTriggerIndexMax || smoothRightEye >= blinkTriggerIndexMax) {	
 			return true;
 		} 
+		else if ( (deltaLeftEye > blinkDeltaIndex) && (smoothLeftEye >= blinkDeltaTriggerMin)){
+			return true;
+
+		}
+		else if ( (deltaRightEye > blinkDeltaIndex) && (smoothRightEye >= blinkDeltaTriggerMin)){
+			return true;
+			
+		}
+		else if (Input.GetKeyDown(KeyCode.B))
+		{
+			return true;
+		}
 		else {
 			return false;
 		}
+	}
+
+	void LastEyeValueL()
+	{
+		if(positionsIndexL > positionsListL.Count - 1)
+		{
+			positionsIndexL = positionsListL.Count;
+		}
+		if(positionsListL.Count > 5 && positionsIndexL > 0){
+			positionsIndexL--;
+			positionsListL.RemoveAt(positionsIndexL);
+		}
+		else{
+			positionsIndexL++;
+			positionsListL.Add(smoothLeftEye);
+			lastEyePositionL = positionsListL[positionsIndexL];
+		}
+
+	}
+	void LastEyeValueR()
+	{
+		if(positionsIndexR > positionsListR.Count - 1)
+		{
+			positionsIndexR = positionsListR.Count;
+		}
+		if(positionsListR.Count > 5 && positionsIndexR > 0){
+			positionsIndexR--;
+			positionsListR.RemoveAt(positionsIndexR);
+		}
+		else{
+			positionsIndexR++;
+			positionsListR.Add(smoothRightEye);
+			lastEyePositionR = positionsListR[positionsIndexR];
+		}
+		
 	}
 }
