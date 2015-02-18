@@ -9,12 +9,13 @@ public class Monster : MonoBehaviour {
 	public GameObject lookAtMe;
 	public GameObject blinkQuad;
 	public float speedTowardsPlayer = 0.2f;
+	float initialSpeed;
 	bool blinkOnce;
 	// Use this for initialization
 	void Start () {
 		blinkOnce = true;
 		//blinkQuad.SetActive(false);
-
+		initialSpeed = speedTowardsPlayer;
 		stage =1;
 
 	}
@@ -34,12 +35,19 @@ public class Monster : MonoBehaviour {
 		}
 		else if (renderer.isVisible == false)
 		{
-			transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speedTowardsPlayer);
+			speedTowardsPlayer = initialSpeed * Time.deltaTime;
+			transform.position = Vector3.Lerp(transform.position, player.transform.position, speedTowardsPlayer);
+			transform.LookAt(lookAtMe.transform.position);
+
 		}
 		if (!EyeValues.playerBlinked){
 			blinkQuad.SetActive(false);
 
 			blinkOnce = true;
+		}
+		if(renderer.isVisible)
+		{
+			speedTowardsPlayer = initialSpeed;
 		}
 
 

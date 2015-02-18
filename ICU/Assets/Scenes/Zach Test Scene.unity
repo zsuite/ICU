@@ -5101,7 +5101,7 @@ MonoBehaviour:
   player: {fileID: 624700650}
   lookAtMe: {fileID: 306752242}
   blinkQuad: {fileID: 587042570}
-  speedTowardsPlayer: .200000003
+  speedTowardsPlayer: .400000006
 --- !u!23 &1553355365
 Renderer:
   m_ObjectHideFlags: 0
