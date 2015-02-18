@@ -3231,7 +3231,7 @@ Transform:
   m_LocalScale: {x: 1.5356853, y: 1.53568542, z: 1.53568542}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!1 &587042570
 GameObject:
   m_ObjectHideFlags: 0
@@ -4110,6 +4110,7 @@ GameObject:
   - 65: {fileID: 859239377}
   - 23: {fileID: 859239376}
   - 114: {fileID: 859239375}
+  - 114: {fileID: 859239380}
   - 114: {fileID: 859239374}
   m_Layer: 0
   m_Name: Trigger
@@ -4148,6 +4149,7 @@ MonoBehaviour:
   triggerCount: 1
   repeatTrigger: 1
   activateViaBlink: 1
+  needsToBeVisible: 0
   nextScene: 
 --- !u!23 &859239376
 Renderer:
@@ -4199,7 +4201,27 @@ Transform:
   m_LocalScale: {x: 15.3900347, y: 5.90333223, z: 15.0890017}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
+--- !u!114 &859239380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 859239373}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8634e062924929664361c08745211fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action: 2
+  afterSeconds: 0
+  target: []
+  source: {fileID: 1553355362}
+  triggerCount: 1
+  repeatTrigger: 1
+  activateViaBlink: 1
+  needsToBeVisible: 0
+  nextScene: 
 --- !u!1 &880297691
 GameObject:
   m_ObjectHideFlags: 0
@@ -5048,7 +5070,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1553355363
 Transform:
   m_ObjectHideFlags: 0
@@ -5186,6 +5208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _manualMode: 0
   _recordToExternalFile: 0
+  _operatorVideoScreen: {fileID: 859239373}
 --- !u!4 &1570313787
 Transform:
   m_ObjectHideFlags: 0
@@ -5197,7 +5220,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
 --- !u!114 &1570313788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5216,8 +5239,8 @@ MonoBehaviour:
   deltaLeftEye: 0
   deltaRightEye: 0
   blinkDeltaIndex: 10
-  blinkDeltaTriggerMin: 25
-  blinkTriggerIndexMax: 80
+  blinkDeltaTriggerMin: 10
+  blinkTriggerIndexMax: 75
 --- !u!1001 &1780986337
 Prefab:
   m_ObjectHideFlags: 0

@@ -85,14 +85,14 @@ public class EyeValues : MonoBehaviour {
 		{
 			positionsIndexL = positionsListL.Count;
 		}
-		if(positionsListL.Count > 5 && positionsIndexL > 0){
+		if(positionsListL.Count > 3 && positionsIndexL > 0){
 			positionsIndexL--;
-			positionsListL.RemoveAt(positionsIndexL);
+			lastEyePositionL = positionsListL[0];
+			positionsListL.RemoveAt(0);
 		}
 		else{
 			positionsIndexL++;
 			positionsListL.Add(smoothLeftEye);
-			lastEyePositionL = positionsListL[positionsIndexL];
 		}
 
 	}
@@ -102,14 +102,14 @@ public class EyeValues : MonoBehaviour {
 		{
 			positionsIndexR = positionsListR.Count;
 		}
-		if(positionsListR.Count > 5 && positionsIndexR > 0){
+		if(positionsListR.Count > 3 && positionsIndexR > 0){
 			positionsIndexR--;
-			positionsListR.RemoveAt(positionsIndexR);
+			lastEyePositionR = positionsListR[0];
+			positionsListR.RemoveAt(0);
 		}
 		else{
 			positionsIndexR++;
 			positionsListR.Add(smoothRightEye);
-			lastEyePositionR = positionsListR[positionsIndexR];
 		}
 		
 	}

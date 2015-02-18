@@ -28,7 +28,7 @@ public class ActivateTrigger : MonoBehaviour {
 	public int triggerCount = 1;///
 	public bool repeatTrigger = false;
 	public bool activateViaBlink = true;
-
+	public bool needsToBeVisible = false;
 	public string nextScene;
 	private bool PlayerBlinked;
 	bool activateReady = false;
@@ -55,7 +55,7 @@ public class ActivateTrigger : MonoBehaviour {
 //			if (targetBehaviour != null)
 //				targetGameObject = targetBehaviour.gameObject;
 			for(int i = 0; i < target.Length; i++){
-				if(target[i].renderer.isVisible && PlayerBlinked){
+				if(target[i].renderer.isVisible == needsToBeVisible && PlayerBlinked){
 
 					switch (action) {
 						case Mode.Trigger:
@@ -98,14 +98,14 @@ public class ActivateTrigger : MonoBehaviour {
 //		if (targetBehaviour != null)
 //			targetGameObject = targetBehaviour.gameObject;
 		for(int i = 0; i < target.Length; i++){
-			if(target[i].renderer.isVisible && PlayerBlinked){
+			if(target[i].renderer.isVisible == needsToBeVisible && PlayerBlinked){
 				switch (action) {
 				case Mode.Trigger:
 					target[i].BroadcastMessage ("DoActivateTrigger");
 					break;
 				case Mode.Replace:
 					if (source != null) {
-						Object.Instantiate (source, target[i].transform.position, target[i].transform.rotation);
+						GameObject.Instantiate (source, target[i].transform.position, target[i].transform.rotation);
 						Destroy (target[i]);
 					}
 					break;

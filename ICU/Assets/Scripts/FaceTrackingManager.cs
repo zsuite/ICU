@@ -48,7 +48,7 @@ public class FaceTrackingManager : MonoBehaviour
 	
 	public bool _manualMode = false;
 	public bool _recordToExternalFile;
-	//public GameObject _operatorVideoScreen = null;
+	public GameObject _operatorVideoScreen = null;
 	
 	#endregion
 	
@@ -241,8 +241,6 @@ public class FaceTrackingManager : MonoBehaviour
 	void Update()
 	{
 
-
-
 		if (_pxcmSenseManager == null)
 		{
 			return;
@@ -304,7 +302,7 @@ public class FaceTrackingManager : MonoBehaviour
 			else if (Event.current.keyCode == KeyCode.I)
 			{
 				_showOperatorVideo = !_showOperatorVideo;
-			//	_operatorVideoScreen.renderer.enabled = _showOperatorVideo;
+				_operatorVideoScreen.renderer.enabled = _showOperatorVideo;
 			}
 		}
 	}
@@ -424,7 +422,7 @@ public class FaceTrackingManager : MonoBehaviour
 			_operatorVideoTexture = new Texture2D(960, 540, TextureFormat.ARGB32, false);
 		}
 		
-	//	_operatorVideoScreen.renderer.material.mainTexture = _operatorVideoTexture;
+		_operatorVideoScreen.renderer.material.mainTexture = _operatorVideoTexture;
 	}
 	
 	private void UpdateFace()
@@ -437,7 +435,7 @@ public class FaceTrackingManager : MonoBehaviour
 		PXCMFaceData.Face pxcmFace = _pxcmFaceData.QueryFaceByIndex(0);
 		if (_pxcmFaceData.QueryNumberOfDetectedFaces() <= 0)
 		{
-			Debug.Log("PXCMFaceData.QueryFaceByIndex(0) failed.");
+			//Debug.Log("PXCMFaceData.QueryFaceByIndex(0) failed.");
 			return;
 		}
 		
