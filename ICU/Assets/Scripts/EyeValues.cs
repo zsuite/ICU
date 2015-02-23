@@ -51,8 +51,8 @@ public class EyeValues : MonoBehaviour {
 		deltaLeftEye = smoothLeftEye - lastEyePositionL;
 		deltaRightEye = smoothRightEye - lastEyePositionR;
 
-		smoothLeftEye = Mathf.RoundToInt(realCam.LeftEyeClose); // Rounds float values to integers
-		smoothRightEye = Mathf.RoundToInt(realCam.RightEyeClose);
+		smoothLeftEye = Mathf.RoundToInt(realCam.LBlink); // Rounds float values to integers
+		smoothRightEye = Mathf.RoundToInt(realCam.RBlink);
 
 		playerBlinked = CheckEyeClosure();
 
