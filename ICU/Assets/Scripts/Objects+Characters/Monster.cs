@@ -35,7 +35,7 @@ public class Monster : MonoBehaviour {
 		}
 		else if (renderer.isVisible == false)
 		{
-			Debug.Log ("ImCOMING");
+//			Debug.Log ("ImCOMING");
 			speedTowardsPlayer = initialSpeed * Time.deltaTime;
 			transform.position = Vector3.Lerp(transform.position, player.transform.position, speedTowardsPlayer);
 			transform.LookAt(lookAtMe.transform.position);
