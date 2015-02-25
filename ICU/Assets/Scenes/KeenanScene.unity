@@ -73,7 +73,6 @@ NavMeshSettings:
     minRegionArea: 2
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
-    tileSizeHint: 0
   m_NavMesh: {fileID: 0}
 --- !u!1 &271496
 GameObject:
@@ -286,7 +285,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 37523596}
   m_LocalRotation: {x: .000612560194, y: .00378421019, z: -.159791544, w: .987143338}
-  m_LocalPosition: {x: .838, y: -.297600001, z: .0203000009}
+  m_LocalPosition: {x: .605394006, y: -.282798916, z: .0209712572}
   m_LocalScale: {x: 5.53218889, y: 1.9066999, z: 2.0676825}
   m_Children:
   - {fileID: 2075210743}
@@ -2579,9 +2578,9 @@ AudioSource:
   m_GameObject: {fileID: 389320108}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: b81ecaf71337549b4b0e3b26782499cd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2a209dbd1012ff141bbde39ea2699e41, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: .800000012
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3399,7 +3398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71d4693dbec7dbb488156bef5196069c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  secondsTillSceneChange: 8
+  secondsTillSceneChange: 5
 --- !u!82 &532751201
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3408,7 +3407,7 @@ AudioSource:
   m_GameObject: {fileID: 532751197}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: d00effee4e81854479f52917444fdd86, type: 3}
+  m_audioClip: {fileID: 8300000, guid: dbb648df88cb035448456439144c9566, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -8105,7 +8104,7 @@ AudioSource:
   m_GameObject: {fileID: 1217114836}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 577de7e85f04e9044bbc326cbe14e82b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3ceadd81189baee41acbb7bafae2ba8e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -8492,7 +8491,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1251386500}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97b4768c3683045e4bfdb2e78272970c, type: 3}
   m_Name: 
@@ -8510,7 +8509,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1251386500}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a88a26a276b4e47619ce2c5adad33fab, type: 3}
   m_Name: 
@@ -8533,7 +8532,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1251386500}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 43d955acba56d47d3be0eb7eef88325c, type: 3}
   m_Name: 
@@ -9840,8 +9839,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1566489379}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -42.5000038, y: 0, z: 0}
-  m_LocalScale: {x: 12.6725521, y: 19.1286507, z: 18.6744747}
+  m_LocalPosition: {x: -41.7967949, y: 0, z: 0}
+  m_LocalScale: {x: 16.300312, y: 19.1286507, z: 18.6744747}
   m_Children: []
   m_Father: {fileID: 794283408}
   m_RootOrder: 1
@@ -10367,7 +10366,6 @@ MonoBehaviour:
   m_Script: {fileID: 1997211142, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AllowActivationOnStandalone: 0
 --- !u!114 &1655065699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10379,12 +10377,6 @@ MonoBehaviour:
   m_Script: {fileID: 1077351063, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_AllowActivationOnMobileDevice: 0
 --- !u!114 &1655065700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10396,9 +10388,6 @@ MonoBehaviour:
   m_Script: {fileID: -619905303, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 5
 --- !u!4 &1655065701
 Transform:
   m_ObjectHideFlags: 0
