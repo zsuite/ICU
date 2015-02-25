@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: eyes
+  m_Shader: {fileID: 4800000, guid: 367ae4c103727ba41a71dde01d4f23b6, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: e95b5a08658fa234db1b69971f3f7e94, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BumpMap
+        second:
+          m_Texture: {fileID: 2800000, guid: bd5470530e9f7994dbfdb71e59e61625, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Cube
+        second:
+          m_Texture: {fileID: 8900000, guid: d7a6162a02cf9b1478ef8c3029a51d82, type: 2}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _Shininess
+        second: .38925308
+      data:
+        first:
+          name: _Strength
+        second: .464285702
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: .838235259, g: .850562274, b: .850562274, a: 1}
+      data:
+        first:
+          name: _SpecColor
+        second: {r: .485294104, g: .403788328, b: .228373677, a: 1}
+      data:
+        first:
+          name: _ReflectColor
+        second: {r: 1, g: 1, b: 1, a: .5}

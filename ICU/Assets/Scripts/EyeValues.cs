@@ -5,30 +5,37 @@ using System.Collections.Generic;
 [RequireComponent(typeof(FaceTrackingManager))]
 public class EyeValues : MonoBehaviour {
 	[SerializeField]
-	private int smoothLeftEye;		//0 = EYE IS OPEN
+	private float smoothLeftEye;		//0 = EYE IS OPEN
 	[SerializeField]
-	private int smoothRightEye;		//100 = EYE IS CLOSED
-
-	[SerializeField]
-	private int lastEyePositionL;
+	private float smoothRightEye;		//100 = EYE IS CLOSED
 
 	[SerializeField]
-	private int lastEyePositionR;
+	private float leftBlinkZero;		/* Eye changed*/ //Grabbed from LLidUp
+	[SerializeField]
+	private float rightBlinkZero;		//EYE changed// RLidUp, idk what it means
+
 
 	[SerializeField]
-	private int deltaLeftEye; // change between current eye position and previous eye position .33 seconds ago.
+	private float lastEyePositionL;
 
 	[SerializeField]
-	private int deltaRightEye; // change between current eye position and previous eye position .33 seconds ago.
+	private float lastEyePositionR;
 
-	public int blinkDeltaIndex = 10; // this is the delta that will trigger a blink
+	[SerializeField]
+	private float deltaLeftEye; // change between current eye position and previous eye position .33 seconds ago.
 
-	public int blinkDeltaTriggerMin = 40; // at this point the delta of your eye values will matter
+	[SerializeField]
+	private float deltaRightEye; // change between current eye position and previous eye position .33 seconds ago.
+
+	 float blinkDeltaIndex = 10; // this is the delta that will trigger a blink
+
+	 float blinkDeltaTriggerMin = 40; // at this point the delta of your eye values will matter
 
 	public static bool playerBlinked;
 
-	public int blinkTriggerIndexMax = 80;	//The value when playerBlinked becomes true // Eyes are efffectively closed
-	
+	public float blinkTriggerIndexMax = 80;	//The value when playerBlinked becomes true // Eyes are efffectively closed
+
+
 	private FaceTrackingManager realCam;
 
 	List<int> positionsListL;
@@ -46,30 +53,33 @@ public class EyeValues : MonoBehaviour {
 	}
 	
 	void Update () {
-		LastEyeValueL();
-		LastEyeValueR();
+		//LastEyeValueL();
+		//LastEyeValueR();
 		deltaLeftEye = smoothLeftEye - lastEyePositionL;
 		deltaRightEye = smoothRightEye - lastEyePositionR;
 
-		smoothLeftEye = Mathf.RoundToInt(realCam.LBlink); // Rounds float values to integers
-		smoothRightEye = Mathf.RoundToInt(realCam.RBlink);
+		smoothLeftEye = realCam.LBlink; // Rounds float values to integers
+		smoothRightEye = realCam.RBlink;
+
+		leftBlinkZero = realCam.LLowLidUp;
+		rightBlinkZero = realCam.RLowLidUp;
 
 		playerBlinked = CheckEyeClosure();
 
 	}
 
 	bool CheckEyeClosure(){
-		if (smoothLeftEye >= blinkTriggerIndexMax || smoothRightEye >= blinkTriggerIndexMax) {	
+		if (smoothLeftEye >= blinkTriggerIndexMax  && leftBlinkZero <= 1|| smoothRightEye >= blinkTriggerIndexMax && rightBlinkZero <= 1) {	
 			return true;
 		} 
-		else if ( (deltaLeftEye > blinkDeltaIndex) && (smoothLeftEye >= blinkDeltaTriggerMin)){
+		/*else if ( (deltaLeftEye > blinkDeltaIndex) && (smoothLeftEye >= blinkDeltaTriggerMin)){
 			return true;
 
 		}
 		else if ( (deltaRightEye > blinkDeltaIndex) && (smoothRightEye >= blinkDeltaTriggerMin)){
 			return true;
 			
-		}
+		}*/
 		else if (Input.GetKeyDown(KeyCode.B))
 		{
 			return true;
@@ -79,7 +89,7 @@ public class EyeValues : MonoBehaviour {
 		}
 	}
 
-	void LastEyeValueL()
+	/*void LastEyeValueL()
 	{
 		if(positionsIndexL > positionsListL.Count - 1)
 		{
@@ -112,5 +122,5 @@ public class EyeValues : MonoBehaviour {
 			positionsListR.Add(smoothRightEye);
 		}
 		
-	}
+	}*/
 }
