@@ -2,7 +2,8 @@
 
 ### What is this repository for? ###
 
-*ICU: Don't Blink
+* ICU: Don't Blink
+
 * Keenan
 * Zach
 
