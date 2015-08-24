@@ -13,136 +13,184 @@ public class ActivateTrigger : MonoBehaviour {
 		Disable   = 4, // Makes invisible
 		Animate   = 5, // Start animation on target
 		Deactivate= 6, // Decativate target GameObject
-		LoadScene = 7 // loads the scene named string
+		LoadScene = 7, // loads the scene named string
+		ReplaceMaterial = 8, // replaces material with the source material
+		ActivateAudio = 9
 	}
 
-	/// The action to accomplish
+	///PlayerBlinked The action to accomplish
 	public Mode action = Mode.Activate;
 
+	public enum FaceAction {
+		Nothing = 0,
+		Blink = 1,
+		Smile = 2
+	}
+	
+	/// The action to accomplish
+	public FaceAction fTrigger = FaceAction.Blink;
 	/// The game object to affect. If none, the trigger work on this game object
 	/// 
 	/// 
 	public float afterSeconds;
 	public GameObject[] target; // thing to activate.. etc
 	public GameObject source; // use only for REPLACE
+	public Material[] sourceMaterials; //USE for replace materials only
+	public bool repeatMaterials = false;
 	public int triggerCount = 1;///
-	public bool repeatTrigger = false;
-	public bool activateViaBlink = true;
-	public bool needsToBeVisible = false;
+	public bool needsToBeInView = false;
+	public bool sourceNeedsToBeInView = false;
 	public string nextScene;
-	private bool PlayerBlinked;
+	private bool FaceTrigger;
+	bool blinkOnce = false;
+	bool onceForMetrics = true;
+
+	private int q;
 	bool activateReady = false;
 	float timeSet = 0;
 
 	void Start(){
-		PlayerBlinked = false;
+		FaceTrigger = false;
+		q = 0;
 	}
 	void Update(){
-		if (activateViaBlink){
-			PlayerBlinked = EyeValues.playerBlinked;
+		switch(fTrigger){
+			case FaceAction.Nothing:
+				FaceTrigger = true;
+				break;
+			case FaceAction.Blink:
+				FaceTrigger = EyeValues.playerBlinked;
+				break;
+			case FaceAction.Smile:
+				FaceTrigger = EyeValues.playerSmiled;
+				break;
 		}
-		else{
-			PlayerBlinked = true;
+
+		if (!FaceTrigger) {
+			blinkOnce = false;
 		}
 	}
 	void DoActivateTrigger () {
-		triggerCount--;
 
-		if (triggerCount == 0 || repeatTrigger) {
+		//if (triggerCount == 0 || repeatTrigger) {
 //			Object[] currentTarget = target != null ? target : gameObject;
 //			Behaviour targetBehaviour = currentTarget as Behaviour;
 //			GameObject[] targetGameObject = currentTarget as GameObject;
 //			if (targetBehaviour != null)
 //				targetGameObject = targetBehaviour.gameObject;
-			for(int i = 0; i < target.Length; i++){
-				if(PlayerBlinked){
-
-					switch (action) {
-						case Mode.Trigger:
-							target[i].BroadcastMessage ("DoActivateTrigger");
-							break;
-						case Mode.Replace:
-							if (source != null) {
-								GameObject.Instantiate (source, target[i].transform.position, target[i].transform.rotation);
-								Destroy(target[i]);
-							}
-							break;
-						case Mode.Activate:
-								target[i].SetActive(true);
-							break;
-						case Mode.Enable:
-							if (target != null)
-								target[i].renderer.enabled = true;
-							break;	
-						case Mode.Disable:
-							if (target != null)
-								target[i].renderer.enabled = false;
-							break;	
-						case Mode.Animate:
-							target[i].animation.Play ();
-							break;	
-						case Mode.Deactivate:
-							target[i].SetActive(false);
-							break;
-					}
-				}
-			}
-		}
-	}
-	void DoActivateTriggerTime () {
-
-//		Object[] currentTarget = target != null ? target : gameObject;
-//		Behaviour targetBehaviour = currentTarget as Behaviour;
-//		GameObject[] targetGameObject = currentTarget as GameObject;
-//		if (targetBehaviour != null)
-//			targetGameObject = targetBehaviour.gameObject;
 		for(int i = 0; i < target.Length; i++){
-			if(PlayerBlinked){
+			if(FaceTrigger && !blinkOnce){
 				switch (action) {
-				case Mode.Trigger:
-					target[i].BroadcastMessage ("DoActivateTrigger");
-					break;
-				case Mode.Replace:
-					if (source != null && target[i].renderer.isVisible) {
-						GameObject.Instantiate (source, target[i].transform.position, target[i].transform.rotation);
-						Destroy (target[i]);
-					}
-					break;
-				case Mode.Activate:
-					if(activateReady)
-						target[i].SetActive(true);
-					break;
-				case Mode.Enable:
-					if (target != null)
-						target[i].renderer.enabled = true;
-					break;	
-				case Mode.Disable:
-					if (target != null && target[i].renderer.isVisible == needsToBeVisible)
-						target[i].renderer.enabled = false;
-					break;	
-				case Mode.Animate:
-					target[i].animation.Play ();
-					break;	
-				case Mode.Deactivate:
-					if(target[i].renderer.isVisible == needsToBeVisible){
-						target[i].SetActive(false);
-					}
-					break;
-				case Mode.LoadScene:
-						Debug.Log("Ya");
-						Application.LoadLevel(nextScene);
-					break;
-				}
-			}
-		}
+					case Mode.Trigger:
+						target[i].BroadcastMessage ("DoActivateTrigger");
+						break;
+					case Mode.Replace:
+						if (target[i] !=null && source != null && target[i].GetComponent<Renderer>().isVisible) {
+							GameObject.Instantiate (source, target[i].transform.position, target[i].transform.rotation);
+							source.SetActive(true);
+							Destroy(target[i]);
+						}
+						break;
+					case Mode.Activate:
+						if(activateReady){
+							if(target[i].GetComponent<Collider>() != null){
+								target[i].GetComponent<Collider>().enabled =true;
+							}
+							if(!needsToBeInView && !sourceNeedsToBeInView){
+								target[i].SetActive(true);
+							}
+							else if (needsToBeInView && target[i].GetComponent<Renderer>() != null && target[i].GetComponent<Renderer>().isVisible){
+								if(target[i].GetComponent<Light>() != null)
+								{
+									target[i].GetComponent<Light>().enabled = true;
+								}
+								if(target[i].GetComponent<Renderer>().material !=null)
+								{
+									float newAlpha = Mathf.Lerp(0, 1F, Time.deltaTime * 1000);
+									target[i].GetComponent<Renderer>().material.color = new Color(GetComponent<Renderer>().material.color.r, GetComponent<Renderer>().material.color.g, GetComponent<Renderer>().material.color.b, newAlpha);
+								}
+								
+							}
+							else if(sourceNeedsToBeInView && source.GetComponent<Renderer>() != null && source.GetComponent<Renderer>().isVisible){
+								target[i].SetActive(true);
+								}
+							}
+						break;
+					case Mode.Enable:
+						if (target != null)
+							target[i].GetComponent<Renderer>().enabled = true;
+						break;	
+					case Mode.Disable:
+						if (target != null && target[i].GetComponent<Renderer>().isVisible)
+							target[i].GetComponent<Renderer>().enabled = false;
+						break;	
+					case Mode.Animate:
+						target[i].GetComponent<Animation>().Play ();
+						break;	
+					case Mode.Deactivate:
+						if (target[i].GetComponent<Renderer>().isVisible && needsToBeInView){
+							if(target[i].GetComponent<Light>() != null)
+							{
+								target[i].GetComponent<Light>().enabled = false;
+							}
+							target[i].SetActive(false);
 
-	}
-	void OnTriggerStay(Collider other){
-		if(afterSeconds != 0 && Time.time > timeSet){
-			activateReady = true;
-			DoActivateTriggerTime();
+						}
+						else if (!needsToBeInView){
+							if(target[i].GetComponent<Light>() != null)
+							{
+								target[i].GetComponent<Light>().enabled = false;
+							}
+							target[i].SetActive(false);
+							
+						}
+						
+						break;
+					case Mode.ReplaceMaterial:
+						if(target[i].activeSelf == false)
+						{
+							target[i].SetActive(true);
+						}
+						if(target[i].GetComponent<Renderer>() != null && target[i].GetComponent<Renderer>().isVisible && q < sourceMaterials.Length){
+								target[i].GetComponent<Renderer>().material = sourceMaterials[q];
+								
+						}
+						else if (target[i].GetComponent<Projector>() != null && q < sourceMaterials.Length){
+							target[i].GetComponent<Projector>().material = sourceMaterials[q];
+						}
+						q++;
+
+						break;
+					case Mode.LoadScene:
+					if(activateReady == true)
+					{Application.LoadLevel(nextScene);}
+					break;
+
+					case Mode.ActivateAudio:	
+						if(activateReady){
+							gameObject.GetComponent<AudioTrigger>().BeginAudioExecution();
+						}
+						break;
+				}
+				blinkOnce = true;
+
+				if(onceForMetrics){
+					MetricManagerScript.DidSomethingHappen(true);
+					onceForMetrics = false;
+				}
+				
+			}
+			triggerCount--;
 		}
-		else if(afterSeconds == 0){
+		//}
+	}
+
+	void OnTriggerStay(Collider other){
+		if(afterSeconds != 0 && Time.time > timeSet && other.tag =="Player"){
+			activateReady = true;
+			DoActivateTrigger();
+		}
+		else if(afterSeconds == 0 && other.tag =="Player"){
 			activateReady = true;
 			DoActivateTrigger ();
 		}
@@ -151,7 +199,8 @@ public class ActivateTrigger : MonoBehaviour {
 	void OnTriggerEnter (Collider other) {
 
 		timeSet = Time.time + afterSeconds;
-		if(afterSeconds == 0){
+		if(afterSeconds == 0 && other.tag =="Player"){
+			activateReady = true;
 			DoActivateTrigger ();
 		}
 

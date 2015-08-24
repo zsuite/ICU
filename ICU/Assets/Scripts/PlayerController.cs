@@ -1,60 +1,93 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerController : Controller {
-	public Transform target;
+public class PlayerController : MonoBehaviour {
+	public Transform monsterHead;
 	public Transform cameraHold;
 	public FaceTrackingManager faceCam;
 	public float maxLeftLook = -30;
 	public float maxRightLook = 30;
 	private float yVelocity = 0.0F;
 	MouseLook[] disableMouse;
+	Vector3 directionOfInterest;
+	bool turnBegan = false;
 	// Use this for initialization
 	void Start () {
+		Cursor.visible = false;
 		StateManager.Dead = false;
 		disableMouse = GetComponentsInChildren<MouseLook>();
-		GetComponent<MouseLook>().enabled = true;
 		GetComponent<CharacterController>().enabled = true;
-		Screen.showCursor = false;
+		Cursor.visible = false;
 		foreach (MouseLook mouse in disableMouse) {	
 			mouse.enabled = true;
 		}
 	}
-	
-	// Update is called once per frame
+
+	// Update is called once per frametar
 	void Update () {
-		if(Input.GetKey(KeyCode.R)){
-			Application.LoadLevel(Application.loadedLevelName);
+
+		directionOfInterest = monsterHead.position - cameraHold.position;
+		directionOfInterest = directionOfInterest.normalized;
+		if (turnBegan){
+			Quaternion oldRot = Camera.main.transform.rotation;
+			Camera.main.transform.LookAt(monsterHead.position) ;
+			Quaternion newRot = Camera.main.transform.rotation ;
+			Camera.main.transform.rotation = Quaternion.Lerp(oldRot , newRot, 3f * Time.deltaTime) ;
+
+			//cameraHold.rotation = Quaternion.Slerp(rotationC, rotationT, -0.1f);
+/*			Camera.main.transform.rotation = Quaternion.Slerp(cameraHold.forward, directionOfInterest, 1f * Time.deltaTime);
+*/			//Quaternion.Lerp()
+			//cameraHold.up = monsterHead.up;
 		}
-		if(Input.GetKeyDown(KeyCode.Escape)){
-			Screen.showCursor = !Screen.showCursor;
-		}
+
+
 
 		if(StateManager.Dead == true){
 			BeginTurn();
 		}
-		if(faceCam.EyesMoveLeftRight <=-20 || faceCam.EyesMoveLeftRight >=20){
+		if(StateManager.Pause == true){
+			PausePlayer();
+		}
+		else if (StateManager.Dead == false){
+			UnPausePlayer();
+		}
+		/*if(faceCam.EyesMoveLeftRight <=-15 || faceCam.EyesMoveLeftRight >=15){
 			float smoothMoveLR =  Mathf.Round(faceCam.EyesMoveLeftRight);
 			float newRotation =  Mathf.SmoothDampAngle(cameraHold.localEulerAngles.y, smoothMoveLR, ref yVelocity, .7f);
 
 			cameraHold.localEulerAngles = new Vector3(cameraHold.localEulerAngles.x, newRotation,0);
 		}
-		else if(faceCam.EyesMoveLeftRight >-20 || faceCam.EyesMoveLeftRight <20){
+		else if(faceCam.EyesMoveLeftRight >-15 || faceCam.EyesMoveLeftRight <15){
 			float smoothMoveLR =  Mathf.Round(faceCam.EyesMoveLeftRight);
 			float newRotation =  Mathf.SmoothDampAngle(cameraHold.localEulerAngles.y, 0, ref yVelocity, .4f);
-
-			cameraHold.localEulerAngles = new Vector3(cameraHold.localEulerAngles.x, newRotation,0);
-		}
+			if(StateManager.Dead == false){
+				cameraHold.localEulerAngles = new Vector3(cameraHold.localEulerAngles.x, newRotation,0);
+			}
+		}*/
 	}
 
 	void BeginTurn(){
-		Vector3 relativePos = target.position - cameraHold.position;
-		Quaternion rotationT = Quaternion.LookRotation(relativePos);
-		GetComponent<MouseLook>().enabled = false;
+
+/*		Quaternion rotationQ = Quaternion.Inverse(rotationT) ;
+*/		//transform.LookAt();
+		//GetComponent<MouseLook>().enabled = false;
 		GetComponent<CharacterController>().enabled = false;
 	foreach (MouseLook mouse in disableMouse) {	
 			mouse.enabled = false;
 		}
-			cameraHold.rotation = Quaternion.Slerp (cameraHold.rotation ,rotationT, 0.1f);
+		turnBegan = true;
+/*/*			cameraHold.rotation = Quaternion.Slerp (cameraHold.rotation ,rotationT, 0.1f);
+*/	}
+	void PausePlayer(){
+		GetComponent<CharacterController>().enabled = false;
+		foreach (MouseLook mouse in disableMouse) {	
+			mouse.enabled = false;
+		}
+	}
+	void UnPausePlayer(){
+		GetComponent<CharacterController>().enabled = true;
+		foreach (MouseLook mouse in disableMouse) {	
+			mouse.enabled = true;
+		}
 	}
 }
