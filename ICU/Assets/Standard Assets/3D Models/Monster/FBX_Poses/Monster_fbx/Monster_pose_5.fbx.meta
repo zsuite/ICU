@@ -1,0 +1,371 @@
+fileFormatVersion: 2
+guid: 1d818dc1384d6ea4cb53e8c8fedaa095
+timeCreated: 1428742605
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Monster_Ready:ICU_Monster
+    100004: Monster_Ready:mixamorig:Head
+    100006: Monster_Ready:mixamorig:HeadTop_End
+    100008: Monster_Ready:mixamorig:Hips
+    100010: Monster_Ready:mixamorig:LeftArm
+    100012: Monster_Ready:mixamorig:LeftFoot
+    100014: Monster_Ready:mixamorig:LeftForeArm
+    100016: Monster_Ready:mixamorig:LeftHand
+    100018: Monster_Ready:mixamorig:LeftHandIndex1
+    100020: Monster_Ready:mixamorig:LeftHandIndex2
+    100022: Monster_Ready:mixamorig:LeftHandIndex3
+    100024: Monster_Ready:mixamorig:LeftHandIndex4
+    100026: Monster_Ready:mixamorig:LeftHandMiddle1
+    100028: Monster_Ready:mixamorig:LeftHandMiddle2
+    100030: Monster_Ready:mixamorig:LeftHandMiddle3
+    100032: Monster_Ready:mixamorig:LeftHandMiddle4
+    100034: Monster_Ready:mixamorig:LeftHandPinky1
+    100036: Monster_Ready:mixamorig:LeftHandPinky2
+    100038: Monster_Ready:mixamorig:LeftHandPinky3
+    100040: Monster_Ready:mixamorig:LeftHandPinky4
+    100042: Monster_Ready:mixamorig:LeftHandRing1
+    100044: Monster_Ready:mixamorig:LeftHandRing2
+    100046: Monster_Ready:mixamorig:LeftHandRing3
+    100048: Monster_Ready:mixamorig:LeftHandRing4
+    100050: Monster_Ready:mixamorig:LeftHandThumb1
+    100052: Monster_Ready:mixamorig:LeftHandThumb2
+    100054: Monster_Ready:mixamorig:LeftHandThumb3
+    100056: Monster_Ready:mixamorig:LeftHandThumb4
+    100058: Monster_Ready:mixamorig:LeftLeg
+    100060: Monster_Ready:mixamorig:LeftShoulder
+    100062: Monster_Ready:mixamorig:LeftToe_End
+    100064: Monster_Ready:mixamorig:LeftToeBase
+    100066: Monster_Ready:mixamorig:LeftUpLeg
+    100068: Monster_Ready:mixamorig:Neck
+    100070: Monster_Ready:mixamorig:RightArm
+    100072: Monster_Ready:mixamorig:RightFoot
+    100074: Monster_Ready:mixamorig:RightForeArm
+    100076: Monster_Ready:mixamorig:RightHand
+    100078: Monster_Ready:mixamorig:RightHandIndex1
+    100080: Monster_Ready:mixamorig:RightHandIndex2
+    100082: Monster_Ready:mixamorig:RightHandIndex3
+    100084: Monster_Ready:mixamorig:RightHandIndex4
+    100086: Monster_Ready:mixamorig:RightHandMiddle1
+    100088: Monster_Ready:mixamorig:RightHandMiddle2
+    100090: Monster_Ready:mixamorig:RightHandMiddle3
+    100092: Monster_Ready:mixamorig:RightHandMiddle4
+    100094: Monster_Ready:mixamorig:RightHandPinky1
+    100096: Monster_Ready:mixamorig:RightHandPinky2
+    100098: Monster_Ready:mixamorig:RightHandPinky3
+    100100: Monster_Ready:mixamorig:RightHandPinky4
+    100102: Monster_Ready:mixamorig:RightHandRing1
+    100104: Monster_Ready:mixamorig:RightHandRing2
+    100106: Monster_Ready:mixamorig:RightHandRing3
+    100108: Monster_Ready:mixamorig:RightHandRing4
+    100110: Monster_Ready:mixamorig:RightHandThumb1
+    100112: Monster_Ready:mixamorig:RightHandThumb2
+    100114: Monster_Ready:mixamorig:RightHandThumb3
+    100116: Monster_Ready:mixamorig:RightHandThumb4
+    100118: Monster_Ready:mixamorig:RightLeg
+    100120: Monster_Ready:mixamorig:RightShoulder
+    100122: Monster_Ready:mixamorig:RightToe_End
+    100124: Monster_Ready:mixamorig:RightToeBase
+    100126: Monster_Ready:mixamorig:RightUpLeg
+    100128: Monster_Ready:mixamorig:Spine
+    100130: Monster_Ready:mixamorig:Spine1
+    100132: Monster_Ready:mixamorig:Spine2
+    100134: Monster_Ready:Monster_Joint_GRP
+    100136: Monster_Ready:Root_Joint
+    400000: //RootNode
+    400002: Monster_Ready:ICU_Monster
+    400004: Monster_Ready:mixamorig:Head
+    400006: Monster_Ready:mixamorig:HeadTop_End
+    400008: Monster_Ready:mixamorig:Hips
+    400010: Monster_Ready:mixamorig:LeftArm
+    400012: Monster_Ready:mixamorig:LeftFoot
+    400014: Monster_Ready:mixamorig:LeftForeArm
+    400016: Monster_Ready:mixamorig:LeftHand
+    400018: Monster_Ready:mixamorig:LeftHandIndex1
+    400020: Monster_Ready:mixamorig:LeftHandIndex2
+    400022: Monster_Ready:mixamorig:LeftHandIndex3
+    400024: Monster_Ready:mixamorig:LeftHandIndex4
+    400026: Monster_Ready:mixamorig:LeftHandMiddle1
+    400028: Monster_Ready:mixamorig:LeftHandMiddle2
+    400030: Monster_Ready:mixamorig:LeftHandMiddle3
+    400032: Monster_Ready:mixamorig:LeftHandMiddle4
+    400034: Monster_Ready:mixamorig:LeftHandPinky1
+    400036: Monster_Ready:mixamorig:LeftHandPinky2
+    400038: Monster_Ready:mixamorig:LeftHandPinky3
+    400040: Monster_Ready:mixamorig:LeftHandPinky4
+    400042: Monster_Ready:mixamorig:LeftHandRing1
+    400044: Monster_Ready:mixamorig:LeftHandRing2
+    400046: Monster_Ready:mixamorig:LeftHandRing3
+    400048: Monster_Ready:mixamorig:LeftHandRing4
+    400050: Monster_Ready:mixamorig:LeftHandThumb1
+    400052: Monster_Ready:mixamorig:LeftHandThumb2
+    400054: Monster_Ready:mixamorig:LeftHandThumb3
+    400056: Monster_Ready:mixamorig:LeftHandThumb4
+    400058: Monster_Ready:mixamorig:LeftLeg
+    400060: Monster_Ready:mixamorig:LeftShoulder
+    400062: Monster_Ready:mixamorig:LeftToe_End
+    400064: Monster_Ready:mixamorig:LeftToeBase
+    400066: Monster_Ready:mixamorig:LeftUpLeg
+    400068: Monster_Ready:mixamorig:Neck
+    400070: Monster_Ready:mixamorig:RightArm
+    400072: Monster_Ready:mixamorig:RightFoot
+    400074: Monster_Ready:mixamorig:RightForeArm
+    400076: Monster_Ready:mixamorig:RightHand
+    400078: Monster_Ready:mixamorig:RightHandIndex1
+    400080: Monster_Ready:mixamorig:RightHandIndex2
+    400082: Monster_Ready:mixamorig:RightHandIndex3
+    400084: Monster_Ready:mixamorig:RightHandIndex4
+    400086: Monster_Ready:mixamorig:RightHandMiddle1
+    400088: Monster_Ready:mixamorig:RightHandMiddle2
+    400090: Monster_Ready:mixamorig:RightHandMiddle3
+    400092: Monster_Ready:mixamorig:RightHandMiddle4
+    400094: Monster_Ready:mixamorig:RightHandPinky1
+    400096: Monster_Ready:mixamorig:RightHandPinky2
+    400098: Monster_Ready:mixamorig:RightHandPinky3
+    400100: Monster_Ready:mixamorig:RightHandPinky4
+    400102: Monster_Ready:mixamorig:RightHandRing1
+    400104: Monster_Ready:mixamorig:RightHandRing2
+    400106: Monster_Ready:mixamorig:RightHandRing3
+    400108: Monster_Ready:mixamorig:RightHandRing4
+    400110: Monster_Ready:mixamorig:RightHandThumb1
+    400112: Monster_Ready:mixamorig:RightHandThumb2
+    400114: Monster_Ready:mixamorig:RightHandThumb3
+    400116: Monster_Ready:mixamorig:RightHandThumb4
+    400118: Monster_Ready:mixamorig:RightLeg
+    400120: Monster_Ready:mixamorig:RightShoulder
+    400122: Monster_Ready:mixamorig:RightToe_End
+    400124: Monster_Ready:mixamorig:RightToeBase
+    400126: Monster_Ready:mixamorig:RightUpLeg
+    400128: Monster_Ready:mixamorig:Spine
+    400130: Monster_Ready:mixamorig:Spine1
+    400132: Monster_Ready:mixamorig:Spine2
+    400134: Monster_Ready:Monster_Joint_GRP
+    400136: Monster_Ready:Root_Joint
+    4300000: Monster_Ready:ICU_Monster
+    7400000: Take 005
+    9500000: //RootNode
+    13700000: Monster_Ready:ICU_Monster
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 005
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 2
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Monster_Ready:ICU_Monster
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:LeftUpLeg
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:LeftUpLeg/Monster_Ready:mixamorig:LeftLeg
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:LeftUpLeg/Monster_Ready:mixamorig:LeftLeg/Monster_Ready:mixamorig:LeftFoot
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:LeftUpLeg/Monster_Ready:mixamorig:LeftLeg/Monster_Ready:mixamorig:LeftFoot/Monster_Ready:mixamorig:LeftToeBase
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:LeftUpLeg/Monster_Ready:mixamorig:LeftLeg/Monster_Ready:mixamorig:LeftFoot/Monster_Ready:mixamorig:LeftToeBase/Monster_Ready:mixamorig:LeftToe_End
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:RightUpLeg
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:RightUpLeg/Monster_Ready:mixamorig:RightLeg
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:RightUpLeg/Monster_Ready:mixamorig:RightLeg/Monster_Ready:mixamorig:RightFoot
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:RightUpLeg/Monster_Ready:mixamorig:RightLeg/Monster_Ready:mixamorig:RightFoot/Monster_Ready:mixamorig:RightToeBase
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:RightUpLeg/Monster_Ready:mixamorig:RightLeg/Monster_Ready:mixamorig:RightFoot/Monster_Ready:mixamorig:RightToeBase/Monster_Ready:mixamorig:RightToe_End
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:LeftShoulder
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:LeftShoulder/Monster_Ready:mixamorig:LeftArm
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:LeftShoulder/Monster_Ready:mixamorig:LeftArm/Monster_Ready:mixamorig:LeftForeArm
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:LeftShoulder/Monster_Ready:mixamorig:LeftArm/Monster_Ready:mixamorig:LeftForeArm/Monster_Ready:mixamorig:LeftHand
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:LeftShoulder/Monster_Ready:mixamorig:LeftArm/Monster_Ready:mixamorig:LeftForeArm/Monster_Ready:mixamorig:LeftHand/Monster_Ready:mixamorig:LeftHandIndex1
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:LeftShoulder/Monster_Ready:mixamorig:LeftArm/Monster_Ready:mixamorig:LeftForeArm/Monster_Ready:mixamorig:LeftHand/Monster_Ready:mixamorig:LeftHandIndex1/Monster_Ready:mixamorig:LeftHandIndex2
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:LeftShoulder/Monster_Ready:mixamorig:LeftArm/Monster_Ready:mixamorig:LeftForeArm/Monster_Ready:mixamorig:LeftHand/Monster_Ready:mixamorig:LeftHandIndex1/Monster_Ready:mixamorig:LeftHandIndex2/Monster_Ready:mixamorig:LeftHandIndex3
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:LeftShoulder/Monster_Ready:mixamorig:LeftArm/Monster_Ready:mixamorig:LeftForeArm/Monster_Ready:mixamorig:LeftHand/Monster_Ready:mixamorig:LeftHandIndex1/Monster_Ready:mixamorig:LeftHandIndex2/Monster_Ready:mixamorig:LeftHandIndex3/Monster_Ready:mixamorig:LeftHandIndex4
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:LeftShoulder/Monster_Ready:mixamorig:LeftArm/Monster_Ready:mixamorig:LeftForeArm/Monster_Ready:mixamorig:LeftHand/Monster_Ready:mixamorig:LeftHandMiddle1
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:LeftShoulder/Monster_Ready:mixamorig:LeftArm/Monster_Ready:mixamorig:LeftForeArm/Monster_Ready:mixamorig:LeftHand/Monster_Ready:mixamorig:LeftHandMiddle1/Monster_Ready:mixamorig:LeftHandMiddle2
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:LeftShoulder/Monster_Ready:mixamorig:LeftArm/Monster_Ready:mixamorig:LeftForeArm/Monster_Ready:mixamorig:LeftHand/Monster_Ready:mixamorig:LeftHandMiddle1/Monster_Ready:mixamorig:LeftHandMiddle2/Monster_Ready:mixamorig:LeftHandMiddle3
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:LeftShoulder/Monster_Ready:mixamorig:LeftArm/Monster_Ready:mixamorig:LeftForeArm/Monster_Ready:mixamorig:LeftHand/Monster_Ready:mixamorig:LeftHandMiddle1/Monster_Ready:mixamorig:LeftHandMiddle2/Monster_Ready:mixamorig:LeftHandMiddle3/Monster_Ready:mixamorig:LeftHandMiddle4
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:LeftShoulder/Monster_Ready:mixamorig:LeftArm/Monster_Ready:mixamorig:LeftForeArm/Monster_Ready:mixamorig:LeftHand/Monster_Ready:mixamorig:LeftHandPinky1
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:LeftShoulder/Monster_Ready:mixamorig:LeftArm/Monster_Ready:mixamorig:LeftForeArm/Monster_Ready:mixamorig:LeftHand/Monster_Ready:mixamorig:LeftHandPinky1/Monster_Ready:mixamorig:LeftHandPinky2
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:LeftShoulder/Monster_Ready:mixamorig:LeftArm/Monster_Ready:mixamorig:LeftForeArm/Monster_Ready:mixamorig:LeftHand/Monster_Ready:mixamorig:LeftHandPinky1/Monster_Ready:mixamorig:LeftHandPinky2/Monster_Ready:mixamorig:LeftHandPinky3
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:LeftShoulder/Monster_Ready:mixamorig:LeftArm/Monster_Ready:mixamorig:LeftForeArm/Monster_Ready:mixamorig:LeftHand/Monster_Ready:mixamorig:LeftHandPinky1/Monster_Ready:mixamorig:LeftHandPinky2/Monster_Ready:mixamorig:LeftHandPinky3/Monster_Ready:mixamorig:LeftHandPinky4
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:LeftShoulder/Monster_Ready:mixamorig:LeftArm/Monster_Ready:mixamorig:LeftForeArm/Monster_Ready:mixamorig:LeftHand/Monster_Ready:mixamorig:LeftHandRing1
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:LeftShoulder/Monster_Ready:mixamorig:LeftArm/Monster_Ready:mixamorig:LeftForeArm/Monster_Ready:mixamorig:LeftHand/Monster_Ready:mixamorig:LeftHandRing1/Monster_Ready:mixamorig:LeftHandRing2
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:LeftShoulder/Monster_Ready:mixamorig:LeftArm/Monster_Ready:mixamorig:LeftForeArm/Monster_Ready:mixamorig:LeftHand/Monster_Ready:mixamorig:LeftHandRing1/Monster_Ready:mixamorig:LeftHandRing2/Monster_Ready:mixamorig:LeftHandRing3
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:LeftShoulder/Monster_Ready:mixamorig:LeftArm/Monster_Ready:mixamorig:LeftForeArm/Monster_Ready:mixamorig:LeftHand/Monster_Ready:mixamorig:LeftHandRing1/Monster_Ready:mixamorig:LeftHandRing2/Monster_Ready:mixamorig:LeftHandRing3/Monster_Ready:mixamorig:LeftHandRing4
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:LeftShoulder/Monster_Ready:mixamorig:LeftArm/Monster_Ready:mixamorig:LeftForeArm/Monster_Ready:mixamorig:LeftHand/Monster_Ready:mixamorig:LeftHandThumb1
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:LeftShoulder/Monster_Ready:mixamorig:LeftArm/Monster_Ready:mixamorig:LeftForeArm/Monster_Ready:mixamorig:LeftHand/Monster_Ready:mixamorig:LeftHandThumb1/Monster_Ready:mixamorig:LeftHandThumb2
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:LeftShoulder/Monster_Ready:mixamorig:LeftArm/Monster_Ready:mixamorig:LeftForeArm/Monster_Ready:mixamorig:LeftHand/Monster_Ready:mixamorig:LeftHandThumb1/Monster_Ready:mixamorig:LeftHandThumb2/Monster_Ready:mixamorig:LeftHandThumb3
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:LeftShoulder/Monster_Ready:mixamorig:LeftArm/Monster_Ready:mixamorig:LeftForeArm/Monster_Ready:mixamorig:LeftHand/Monster_Ready:mixamorig:LeftHandThumb1/Monster_Ready:mixamorig:LeftHandThumb2/Monster_Ready:mixamorig:LeftHandThumb3/Monster_Ready:mixamorig:LeftHandThumb4
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:Neck
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:Neck/Monster_Ready:mixamorig:Head
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:Neck/Monster_Ready:mixamorig:Head/Monster_Ready:mixamorig:HeadTop_End
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:RightShoulder
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:RightShoulder/Monster_Ready:mixamorig:RightArm
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:RightShoulder/Monster_Ready:mixamorig:RightArm/Monster_Ready:mixamorig:RightForeArm
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:RightShoulder/Monster_Ready:mixamorig:RightArm/Monster_Ready:mixamorig:RightForeArm/Monster_Ready:mixamorig:RightHand
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:RightShoulder/Monster_Ready:mixamorig:RightArm/Monster_Ready:mixamorig:RightForeArm/Monster_Ready:mixamorig:RightHand/Monster_Ready:mixamorig:RightHandIndex1
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:RightShoulder/Monster_Ready:mixamorig:RightArm/Monster_Ready:mixamorig:RightForeArm/Monster_Ready:mixamorig:RightHand/Monster_Ready:mixamorig:RightHandIndex1/Monster_Ready:mixamorig:RightHandIndex2
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:RightShoulder/Monster_Ready:mixamorig:RightArm/Monster_Ready:mixamorig:RightForeArm/Monster_Ready:mixamorig:RightHand/Monster_Ready:mixamorig:RightHandIndex1/Monster_Ready:mixamorig:RightHandIndex2/Monster_Ready:mixamorig:RightHandIndex3
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:RightShoulder/Monster_Ready:mixamorig:RightArm/Monster_Ready:mixamorig:RightForeArm/Monster_Ready:mixamorig:RightHand/Monster_Ready:mixamorig:RightHandIndex1/Monster_Ready:mixamorig:RightHandIndex2/Monster_Ready:mixamorig:RightHandIndex3/Monster_Ready:mixamorig:RightHandIndex4
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:RightShoulder/Monster_Ready:mixamorig:RightArm/Monster_Ready:mixamorig:RightForeArm/Monster_Ready:mixamorig:RightHand/Monster_Ready:mixamorig:RightHandMiddle1
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:RightShoulder/Monster_Ready:mixamorig:RightArm/Monster_Ready:mixamorig:RightForeArm/Monster_Ready:mixamorig:RightHand/Monster_Ready:mixamorig:RightHandMiddle1/Monster_Ready:mixamorig:RightHandMiddle2
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:RightShoulder/Monster_Ready:mixamorig:RightArm/Monster_Ready:mixamorig:RightForeArm/Monster_Ready:mixamorig:RightHand/Monster_Ready:mixamorig:RightHandMiddle1/Monster_Ready:mixamorig:RightHandMiddle2/Monster_Ready:mixamorig:RightHandMiddle3
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:RightShoulder/Monster_Ready:mixamorig:RightArm/Monster_Ready:mixamorig:RightForeArm/Monster_Ready:mixamorig:RightHand/Monster_Ready:mixamorig:RightHandMiddle1/Monster_Ready:mixamorig:RightHandMiddle2/Monster_Ready:mixamorig:RightHandMiddle3/Monster_Ready:mixamorig:RightHandMiddle4
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:RightShoulder/Monster_Ready:mixamorig:RightArm/Monster_Ready:mixamorig:RightForeArm/Monster_Ready:mixamorig:RightHand/Monster_Ready:mixamorig:RightHandPinky1
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:RightShoulder/Monster_Ready:mixamorig:RightArm/Monster_Ready:mixamorig:RightForeArm/Monster_Ready:mixamorig:RightHand/Monster_Ready:mixamorig:RightHandPinky1/Monster_Ready:mixamorig:RightHandPinky2
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:RightShoulder/Monster_Ready:mixamorig:RightArm/Monster_Ready:mixamorig:RightForeArm/Monster_Ready:mixamorig:RightHand/Monster_Ready:mixamorig:RightHandPinky1/Monster_Ready:mixamorig:RightHandPinky2/Monster_Ready:mixamorig:RightHandPinky3
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:RightShoulder/Monster_Ready:mixamorig:RightArm/Monster_Ready:mixamorig:RightForeArm/Monster_Ready:mixamorig:RightHand/Monster_Ready:mixamorig:RightHandPinky1/Monster_Ready:mixamorig:RightHandPinky2/Monster_Ready:mixamorig:RightHandPinky3/Monster_Ready:mixamorig:RightHandPinky4
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:RightShoulder/Monster_Ready:mixamorig:RightArm/Monster_Ready:mixamorig:RightForeArm/Monster_Ready:mixamorig:RightHand/Monster_Ready:mixamorig:RightHandRing1
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:RightShoulder/Monster_Ready:mixamorig:RightArm/Monster_Ready:mixamorig:RightForeArm/Monster_Ready:mixamorig:RightHand/Monster_Ready:mixamorig:RightHandRing1/Monster_Ready:mixamorig:RightHandRing2
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:RightShoulder/Monster_Ready:mixamorig:RightArm/Monster_Ready:mixamorig:RightForeArm/Monster_Ready:mixamorig:RightHand/Monster_Ready:mixamorig:RightHandRing1/Monster_Ready:mixamorig:RightHandRing2/Monster_Ready:mixamorig:RightHandRing3
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:RightShoulder/Monster_Ready:mixamorig:RightArm/Monster_Ready:mixamorig:RightForeArm/Monster_Ready:mixamorig:RightHand/Monster_Ready:mixamorig:RightHandRing1/Monster_Ready:mixamorig:RightHandRing2/Monster_Ready:mixamorig:RightHandRing3/Monster_Ready:mixamorig:RightHandRing4
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:RightShoulder/Monster_Ready:mixamorig:RightArm/Monster_Ready:mixamorig:RightForeArm/Monster_Ready:mixamorig:RightHand/Monster_Ready:mixamorig:RightHandThumb1
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:RightShoulder/Monster_Ready:mixamorig:RightArm/Monster_Ready:mixamorig:RightForeArm/Monster_Ready:mixamorig:RightHand/Monster_Ready:mixamorig:RightHandThumb1/Monster_Ready:mixamorig:RightHandThumb2
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:RightShoulder/Monster_Ready:mixamorig:RightArm/Monster_Ready:mixamorig:RightForeArm/Monster_Ready:mixamorig:RightHand/Monster_Ready:mixamorig:RightHandThumb1/Monster_Ready:mixamorig:RightHandThumb2/Monster_Ready:mixamorig:RightHandThumb3
+        weight: 1
+      - path: Monster_Ready:Monster_Joint_GRP/Monster_Ready:Root_Joint/Monster_Ready:mixamorig:Hips/Monster_Ready:mixamorig:Spine/Monster_Ready:mixamorig:Spine1/Monster_Ready:mixamorig:Spine2/Monster_Ready:mixamorig:RightShoulder/Monster_Ready:mixamorig:RightArm/Monster_Ready:mixamorig:RightForeArm/Monster_Ready:mixamorig:RightHand/Monster_Ready:mixamorig:RightHandThumb1/Monster_Ready:mixamorig:RightHandThumb2/Monster_Ready:mixamorig:RightHandThumb3/Monster_Ready:mixamorig:RightHandThumb4
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

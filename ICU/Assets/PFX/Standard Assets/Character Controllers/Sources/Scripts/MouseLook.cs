@@ -27,9 +27,11 @@ public class MouseLook : MonoBehaviour {
 
 	public float minimumY = -60F;
 	public float maximumY = 60F;
-
+	private float xVelocity = 1.0f;
 	float rotationY = 0F;
+	float rotationX = 0F;
 
+	public bool lockX = false;
 	void Update ()
 	{
 		if (axes == RotationAxes.MouseXAndY)
@@ -43,7 +45,21 @@ public class MouseLook : MonoBehaviour {
 		}
 		else if (axes == RotationAxes.MouseX)
 		{
-			transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityX, 0);
+			if(lockX){
+				rotationX += Input.GetAxis("Mouse X") * sensitivityX;
+				//rotationX = Mathf.Clamp (rotationX, minimumX, maximumX);
+				if(rotationX < minimumX){
+				rotationX = Mathf.SmoothDamp(rotationX, minimumX , ref xVelocity, .05f);
+				}
+				else if (rotationX > maximumX){
+					rotationX = Mathf.SmoothDamp(rotationX, maximumX , ref xVelocity, .05f);
+
+				}
+				transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, rotationX, 0);
+			}
+			else{
+				transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityX , 0);
+			}
 		}
 		else
 		{

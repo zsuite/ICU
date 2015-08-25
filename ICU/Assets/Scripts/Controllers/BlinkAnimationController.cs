@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class BlinkAnimationController : MonoBehaviour {
-	bool blinkOnce;
+	bool blinkOnce = true;
 	public GameObject blinkQuad;
 	// Use this for initialization
 	void Start () {
@@ -13,7 +13,7 @@ public class BlinkAnimationController : MonoBehaviour {
 	void Update () {
 		if (EyeValues.playerBlinked && blinkOnce) {
 			blinkQuad.SetActive (true);
-			Invoke("EndBlink", 0.1f);
+			Invoke("EndBlink", 0.05f);
 			blinkOnce = false;
 		}
 

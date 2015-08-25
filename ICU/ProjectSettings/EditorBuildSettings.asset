@@ -6,4 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/KeenanScene.unity
+    path: Assets/Scenes/OpeningScreen.unity
+  - enabled: 1
+    path: Assets/Scenes/Calibration_1.unity
+  - enabled: 1
+    path: Assets/Scenes/HallwayStart_1.unity
+  - enabled: 1
+    path: Assets/Scenes/EndCredits.unity

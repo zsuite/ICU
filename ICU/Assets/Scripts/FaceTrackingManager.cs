@@ -669,7 +669,7 @@ public class FaceTrackingManager : MonoBehaviour
 			else if (Event.current.keyCode == KeyCode.I)
 			{
 				_showOperatorVideo = !_showOperatorVideo;
-				_operatorVideoScreen.renderer.enabled = _showOperatorVideo;
+				_operatorVideoScreen.GetComponent<Renderer>().enabled = _showOperatorVideo;
 			}
 		}
 	}
@@ -793,7 +793,7 @@ public class FaceTrackingManager : MonoBehaviour
 		}
 		var size = _pxcmSenseManager.QueryCaptureManager().QueryImageSize(PXCMCapture.StreamType.STREAM_TYPE_COLOR);
 		_operatorVideoTexture = new Texture2D(size.width, size.height, TextureFormat.ARGB32, false);		
-		_operatorVideoScreen.renderer.material.mainTexture = _operatorVideoTexture;
+		_operatorVideoScreen.GetComponent<Renderer>().material.mainTexture = _operatorVideoTexture;
 	}
 	
 	private void UpdateFace()
