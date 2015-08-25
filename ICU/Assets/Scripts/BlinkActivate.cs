@@ -3,8 +3,6 @@ using System.Collections;
 
 public class BlinkActivate : MonoBehaviour {
 
-
-
 	public ActivateTrigger[] activateScripts;
 	// Use this for initialization
 	bool blinkOnce;
@@ -17,7 +15,7 @@ public class BlinkActivate : MonoBehaviour {
 	
 	// Update is called once per frame
 	void OnTriggerStay(Collider other) {
-		if(blinkOnce && other.tag =="Player"){
+		if(EyeValues.playerBlinked && blinkOnce){
 			//blinkQuad.SetActive(true);
 			foreach(ActivateTrigger actT in activateScripts)
 			{
@@ -26,7 +24,10 @@ public class BlinkActivate : MonoBehaviour {
 			blinkOnce =false;
 			
 		}
+		if (!EyeValues.playerBlinked){
 
+			blinkOnce = true;
+		}
 		
 	}
 }

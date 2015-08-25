@@ -22,8 +22,7 @@ public class FaceAnimationController : MonoBehaviour
 	#endregion
 	
 	#region Public Members
-
-	public float bodyMouthMultiplier = 1f;
+	
 	public GameObject _bodyObject;
 	public GameObject _mouthObject;
 	
@@ -587,7 +586,7 @@ public class FaceAnimationController : MonoBehaviour
 		SetBlendShapeValue (lowerLipDown, _lowerLipDownBodyBlendShapeIndex, _lowerLipDownInitialValue, ref _executeLowerLipDownSmoothing, out value, _bodyRenderer);
 		//SetBodyBlendShapeValue (mouthFrown, _mouthFrownBodyBlendShapeIndex, _mouthFrownInitialValue, ref _executeMouthFrownSmoothing, out value);
 		SetBlendShapeValue (mouthPucker, _mouthPuckerBodyBlendShapeIndex, _mouthPuckerInitialValue, ref _executeMouthPuckerSmoothing, out value, _bodyRenderer);
-		SetBlendShapeValue (mouthOpen * bodyMouthMultiplier, _mouthOpenBodyBlendShapeIndex, _mouthOpenInitialValue, ref _executeMouthOpenSmoothing, out value, _bodyRenderer);
+		SetBlendShapeValue (mouthOpen, _mouthOpenBodyBlendShapeIndex, _mouthOpenInitialValue, ref _executeMouthOpenSmoothing, out value, _bodyRenderer);
 		
 		//MouthRenderer
 		SetBlendShapeValue (mouthOpenMouth, _mouthOpenMouthBlendShapeIndex, _mouthOpenMouthInitialValue, ref _executeMouthOpenMouthSmoothing, out value, _mouthRenderer);
@@ -754,7 +753,7 @@ public class FaceAnimationController : MonoBehaviour
 	{
 		value = 0;
 		
-		if (/*_mouthRenderer && */blendShapeIndex >= 0)
+		if (_mouthRenderer && blendShapeIndex >= 0)
 		{
 			value = CalcBlendShapeValueForRenderer(rawValue, blendShapeIndex, initialValue, ref executeSmoothing, renderer );
 			//value = Mathf.Clamp(value, 0, 100);

@@ -9,86 +9,118 @@ public class EyeValues : MonoBehaviour {
 	[SerializeField]
 	private float smoothRightEye;		//100 = EYE IS CLOSED
 
+	[SerializeField]
+	private float leftBlinkZero;		/* Eye changed*/ //Grabbed from LLidUp
+	[SerializeField]
+	private float rightBlinkZero;		//EYE changed// RLidUp, idk what it means
+
+
+	[SerializeField]
+	private float lastEyePositionL;
+
+	[SerializeField]
+	private float lastEyePositionR;
+
+	[SerializeField]
+	private float deltaLeftEye; // change between current eye position and previous eye position .33 seconds ago.
+
+	[SerializeField]
+	private float deltaRightEye; // change between current eye position and previous eye position .33 seconds ago.
+
+	 float blinkDeltaIndex = 10; // this is the delta that will trigger a blink
+
+	 float blinkDeltaTriggerMin = 40; // at this point the delta of your eye values will matter
+
 	public static bool playerBlinked;
-	public static int numberOfBlinks = 0;
 
-	public static bool playerSmiled;
-
-	public float blinkTriggerIndexMax = 100;	//The value when playerBlinked becomes true // Eyes are efffectively closed
+	public float blinkTriggerIndexMax = 80;	//The value when playerBlinked becomes true // Eyes are efffectively closed
 
 
 	private FaceTrackingManager realCam;
-	bool blinkOnce = true;
 
-	Vector3 facePos;
-	/*List<int> positionsListL;
+	List<int> positionsListL;
 	List<int> positionsListR;
 
 	int positionsIndexL;
 	int positionsIndexR;
-*/
+
 	void Start () {
-		//Application.targetFrameRate = 30;
-		/*positionsIndexL = 0;
+		positionsIndexL = 0;
 		positionsIndexR = 0;
 		positionsListL = new List<int>();
-		positionsListR = new List<int>();*/
+		positionsListR = new List<int>();
 		realCam = gameObject.GetComponent<FaceTrackingManager>();
 	}
 	
 	void Update () {
-		/*//LastEyeValueL();
+		//LastEyeValueL();
 		//LastEyeValueR();
 		deltaLeftEye = smoothLeftEye - lastEyePositionL;
 		deltaRightEye = smoothRightEye - lastEyePositionR;
-*/
+
 		smoothLeftEye = realCam.LBlink; // Rounds float values to integers
 		smoothRightEye = realCam.RBlink;
-//		facePos = realCam.currentHeadPose;
-//		leftBlinkZero = realCam.LLowLidUp;
-//		rightBlinkZero = realCam.RLowLidUp;
-		if(realCam.LMouthSmile > 50f || realCam.RMouthSmile > 50f || realCam.LMouthSmileCorrect > 50 || realCam.RMouthSmileCorrect > 50){
-			playerSmiled = true;
-		}
-		else if(Input.GetKeyDown(KeyCode.H))
-		{
-			playerSmiled = true;
-		}
-		else{
-			playerSmiled = false;
-		}
-		CheckEyeClosure();
-	}
 
-	void LateUpdate(){
+		leftBlinkZero = realCam.LLowLidUp;
+		rightBlinkZero = realCam.RLowLidUp;
+
+		playerBlinked = CheckEyeClosure();
 
 	}
 
-	void CheckEyeClosure(){
-		if (blinkOnce && (smoothLeftEye >= blinkTriggerIndexMax || smoothRightEye >= blinkTriggerIndexMax) ) {	
-			numberOfBlinks++;
-			MetricManagerScript.AddPosition(Camera.main.transform.position);
-			MetricManagerScript.AddDirection(Camera.main.transform.rotation);
-			if(MetricManagerScript.somethingHappened.Count < MetricManagerScript.locationMetrics.Count){
-				MetricManagerScript.AddBlinkNumber(1);
-				MetricManagerScript.DidSomethingHappen(false);
-			}
-			blinkOnce = false;
+	bool CheckEyeClosure(){
+		if (smoothLeftEye >= blinkTriggerIndexMax  && leftBlinkZero <= 1|| smoothRightEye >= blinkTriggerIndexMax && rightBlinkZero <= 1) {	
+			return true;
 		} 
-		if (smoothLeftEye >= blinkTriggerIndexMax || smoothRightEye >= blinkTriggerIndexMax ) {	
-			playerBlinked = true;
-		} 
+		/*else if ( (deltaLeftEye > blinkDeltaIndex) && (smoothLeftEye >= blinkDeltaTriggerMin)){
+			return true;
 
+		}
+		else if ( (deltaRightEye > blinkDeltaIndex) && (smoothRightEye >= blinkDeltaTriggerMin)){
+			return true;
+			
+		}*/
 		else if (Input.GetKeyDown(KeyCode.B))
 		{
-			numberOfBlinks++;
-			playerBlinked = true;
+			return true;
 		}
 		else {
-			blinkOnce = true;
-			playerBlinked = false;
+			return false;
 		}
 	}
 
+	/*void LastEyeValueL()
+	{
+		if(positionsIndexL > positionsListL.Count - 1)
+		{
+			positionsIndexL = positionsListL.Count;
+		}
+		if(positionsListL.Count > 3 && positionsIndexL > 0){
+			positionsIndexL--;
+			lastEyePositionL = positionsListL[0];
+			positionsListL.RemoveAt(0);
+		}
+		else{
+			positionsIndexL++;
+			positionsListL.Add(smoothLeftEye);
+		}
 
+	}
+	void LastEyeValueR()
+	{
+		if(positionsIndexR > positionsListR.Count - 1)
+		{
+			positionsIndexR = positionsListR.Count;
+		}
+		if(positionsListR.Count > 3 && positionsIndexR > 0){
+			positionsIndexR--;
+			lastEyePositionR = positionsListR[0];
+			positionsListR.RemoveAt(0);
+		}
+		else{
+			positionsIndexR++;
+			positionsListR.Add(smoothRightEye);
+		}
+		
+	}*/
 }
